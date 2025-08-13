@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Abdullah Butt - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-primary">Muhammad Abdullah </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4 animate-fade-in-up">
+                        Hi, I'm <span class="gradient-text">Muhammad Abdullah Butt</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-4 animate-fade-in-up">
+                        Computer Science Student
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Passionate about building innovative solutions and continuous learning
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="Abdullah Butt.pdf" download="Abdullah_Butt_Resume.pdf" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full transition duration-300 inline-flex items-center">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Resume
+                        </a>
+                        <a href="#projects" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full transition duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                            <img src="My Pic.jpg" alt="Muhammad Abdullah Butt" class="w-full h-full object-cover">
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Me</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    I am a Computer Science student at FAST NUCES Lahore with a strong foundation in programming and problem-solving. I have hands-on experience with modern technologies like React JS, Django, Node.js, MongoDB and C++, building projects that challenge me and sharpen my skills.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Beyond coding, I'm an avid gamer and fitness enthusiast. Whether it's crafting solutions for real-world problems or pushing my limits at the gym, I thrive on challenges and continuous growth. Let's connect and collaborate on innovative ideas!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-react text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">React JS</h3>
+                    <p class="text-gray-600">Frontend Development</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-python text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Django</h3>
+                    <p class="text-gray-600">Backend Development</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-node-js text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+                    <p class="text-gray-600">Backend Development</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fas fa-database text-4xl text-green-700 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">MongoDB</h3>
+                    <p class="text-gray-600">Database</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">C++</h3>
+                    <p class="text-gray-600">Programming</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">HTML5</h3>
+                    <p class="text-gray-600">Markup Language</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">CSS3</h3>
+                    <p class="text-gray-600">Styling</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-600">Programming</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition skill-card duration-300">
+                    <i class="fas fa-fire text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Firebase</h3>
+                    <p class="text-gray-600">Backend Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+            
+            <!-- MindSweat Project -->
+            <div class="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden project-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <div class="relative h-64 md:h-full">
+                            <img src="MindSweat/home.jpg" alt="MindSweat Home" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-dumbbell text-3xl text-blue-600 mr-3"></i>
+                            <h3 class="text-3xl font-bold text-gray-800">MindSweat</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Designed and developed a comprehensive fitness-focused web application as Backend Engineer using Django. 
+                            Implemented features such as user authentication, BMI calculator, training modules, personalized dashboards, 
+                            feedback system, and an e-commerce shop.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Gained expertise in backend development, database management, and creating user-centric functionalities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Django</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">SQLite</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="MindSweat/bmi.jpg" alt="BMI Calculator" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="MindSweat/workout.jpg" alt="Workout Module" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="MindSweat/products.jpg" alt="E-commerce Shop" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TaleemBoard Project -->
+            <div class="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden project-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-graduation-cap text-3xl text-indigo-600 mr-3"></i>
+                            <h3 class="text-3xl font-bold text-gray-800">TaleemBoard</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            A revision-focused website for Class 9–12 students, offering chapter-wise key concepts, important questions, 
+                            and MCQs for Physics, Chemistry, Biology, and Computer Science.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Features an AI chatbot, TaleemAI, for quick concept clarification and a feedback system to continuously 
+                            improve based on student input.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">HTML</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Firebase</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Vercel</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Gemini AI</span>
+                        </div>
+                        <a href="https://lnkd.in/gNmsrGN2" target="_blank" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Visit Website
+                        </a>
+                        <div class="grid grid-cols-3 gap-2 mt-6">
+                            <img src="TaleemBoard/chatbot.png" alt="AI Chatbot" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="TaleemBoard/chapters.png" alt="Chapter Concepts" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="TaleemBoard/questions.png" alt="Practice Questions" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="relative h-64 md:h-full">
+                            <img src="TaleemBoard/subjects.png" alt="TaleemBoard Subjects" class="w-full h-full object-contain bg-gray-50">
+                            <div class="absolute inset-0 bg-gradient-to-l from-indigo-600/10 to-purple-600/10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tetris Project -->
+            <div class="mb-16 bg-white rounded-2xl shadow-xl overflow-hidden project-card transition duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <div class="relative h-64 md:h-full">
+                            <img src="Tetris/gameplay.jpg" alt="Tetris Gameplay" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-gamepad text-3xl text-purple-600 mr-3"></i>
+                            <h3 class="text-3xl font-bold text-gray-800">Tetris Clone</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Created a full-fledged Tetris clone using C++ and SFML. The game featured a scoring system, 
+                            leaderboards, and smooth graphics, providing an engaging and dynamic experience.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Building it helped me understand key programming concepts, optimize performance, and bring 
+                            a classic game to life through code.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">C++</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">SFML</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Game Development</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="Tetris/home.jpg" alt="Game Menu" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="Tetris/bonus tetris.jpg" alt="Bonus Features" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                            <img src="Tetris/game over.jpg" alt="Game Over Screen" class="w-full h-20 object-cover rounded-lg hover:scale-105 transition cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Let's Connect</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-gradient-to-br from-primary to-secondary p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-6">Ready to collaborate?</h3>
+                            <p class="text-lg mb-8 opacity-90">
+                                I'm always excited to work on innovative projects and connect with like-minded professionals. 
+                                Let's discuss how we can create something amazing together!
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fab fa-linkedin text-2xl mr-4"></i>
+                                    <span class="text-lg">Connect on LinkedIn</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-code text-2xl mr-4"></i>
+                                    <span class="text-lg">Open to collaborations</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-lightbulb text-2xl mr-4"></i>
+                                    <span class="text-lg">Innovative solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                            <div class="text-center">
+                                <div class="mb-8">
+                                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fab fa-linkedin text-4xl text-white"></i>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Muhammad Abdullah Butt</h4>
+                                    <p class="text-gray-600 mb-6">Computer Science Student | Full Stack Developer</p>
+                                </div>
+                                
+                                <a href="https://www.linkedin.com/in/abdullah-butt-0550b1181/?profileId=ACoAACroEgEBrTcfo5fEC5DauQkbZialEk8WJgY" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fab fa-linkedin text-xl mr-3"></i>
+                                    Connect on LinkedIn
+                                </a>
+                                
+                                <div class="mt-6 pt-6 border-t border-gray-200">
+                                    <p class="text-sm text-gray-500 mb-4">Or download my resume</p>
+                                    <a href="Abdullah Butt.pdf" 
+                                       download="Abdullah_Butt_Resume.pdf" 
+                                       class="inline-flex items-center text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Download Resume (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Muhammad Abdullah Butt. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-primary transition" title="GitHub"><i class="fab fa-github text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/abdullah-butt-0550b1181/?profileId=ACoAACroEgEBrTcfo5fEC5DauQkbZialEk8WJgY" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition" title="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="hover:text-primary transition" title="Twitter"><i class="fab fa-twitter text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="relative max-w-4xl max-h-full p-4">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+            <button id="close-lightbox" class="absolute top-2 right-2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full w-10 h-10 flex items-center justify-center transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.getElementById('close-lightbox');
+        
+        // Add click event to all project images
+        document.querySelectorAll('.cursor-pointer').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close lightbox
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed in future)
+        const mobileMenuToggle = () => {
+            // Add mobile menu functionality here if needed
+        };
+    </script>
+</body>
+</html> 
